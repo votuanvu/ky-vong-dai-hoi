@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Kỳ vọng gửi Đại hội</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Web đã deploy thành công 🎉</h1>
+
+  <input type="file" id="avatar" accept="image/*" />
+  <input type="text" id="name" placeholder="Họ và tên" />
+  <input type="text" id="role" placeholder="Chức vụ" />
+  <textarea id="wish" placeholder="Kỳ vọng của bạn"></textarea>
+
+  <button onclick="buildImage()">Tạo ảnh</button>
+  <a id="download" download="ky-vong-dai-hoi.png">Tải ảnh</a>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="script.js"></script>
 </body>
 </html>
