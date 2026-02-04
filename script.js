@@ -1,22 +1,45 @@
-const avatar = document.getElementById("avatar");
+// AVATAR PREVIEW
+const avatarInput = document.getElementById("avatar");
 const avatarPreview = document.getElementById("avatarPreview");
 
-avatar.onchange = () => {
-  const file = avatar.files[0];
-  avatarPreview.src = URL.createObjectURL(file);
-};
-
-["name", "position", "wish"].forEach(id => {
-  document.getElementById(id).oninput = e => {
-    document.querySelector("." + id).innerText = e.target.value;
-  };
+avatarInput.addEventListener("change", () => {
+  const file = avatarInput.files[0];
+  if (file) {
+    avatarPreview.src = URL.createObjectURL(file);
+  }
 });
 
+// TEXT BINDING
+document.getElementById("name").addEventListener("input", e => {
+  document.querySelector(".name").innerText = e.target.value;
+});
+
+document.getElementById("position").addEventListener("input", e => {
+  document.querySelector(".position").innerText = e.target.value;
+});
+
+document.getElementById("wish").addEventListener("input", e => {
+  document.querySelector(".wish").innerText = e.target.value;
+});
+
+// DOWNLOAD IMAGE
 function downloadImage() {
-  html2canvas(document.getElementById("canvas-area")).then(canvas => {
+  const el = document.getElementById("canvas-area");
+
+  html2canvas(el, { scale: 2 }).then(canvas => {
     const link = document.createElement("a");
     link.download = "ky-vong-dai-hoi.png";
-    link.href = canvas.toDataURL();
+    link.href = canvas.toDataURL("image/png");
     link.click();
+    showToast();
   });
+}
+
+// TOAST
+function showToast() {
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
 }
