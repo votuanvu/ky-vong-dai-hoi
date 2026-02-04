@@ -170,4 +170,23 @@ body {
     display: block;
   }
 }
+/* ===== TOP BANNER ===== */
+.top-banner {
+  width: 100%;
+  background: #eaf4fb;
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MOBILE: thêm khoảng cách đẹp */
+@media (max-width: 768px) {
+  .top-banner {
+    margin-bottom: 10px;
+  }
+}
+
 
