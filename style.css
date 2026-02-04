@@ -144,32 +144,18 @@ body {
     align-items: center;
   }
 
-  .form {
-    width: 50%;
-    min-width: 280px;
-    max-width: 420px;
-  }
-
   .preview {
     width: 100%;
-    margin-top: 16px;
+    overflow-x: auto;
   }
 
-  /* CANVAS: giữ đúng tỷ lệ poster */
+  /* CỐ ĐỊNH POSTER, CHỈ THU NHỎ */
   #canvas-area {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-  }
-
-  #bg {
-    width: 100%;
-    height: auto;   /* QUAN TRỌNG */
-    display: block;
+    transform: scale(0.38);
+    transform-origin: top left;
   }
 }
+
 /* ===== TOP BANNER ===== */
 .top-banner {
   width: 100%;
