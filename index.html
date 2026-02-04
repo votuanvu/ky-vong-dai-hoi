@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Kỳ vọng gửi Đại hội</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <div class="container">
+
   <!-- FORM -->
   <div class="form">
     <h3>Tuổi trẻ Vĩnh Long</h3>
 
-    <input type="file" id="avatar" accept="image/*" />
+    <input type="file" id="avatar" accept="image/*">
 
-    <input type="text" id="name" placeholder="Họ và tên" />
-    <input type="text" id="position" placeholder="Chức vụ" />
+    <input type="text" id="name" placeholder="Họ và tên">
+    <input type="text" id="position" placeholder="Chức vụ">
     <textarea id="wish" placeholder="Kỳ vọng của bạn"></textarea>
 
-    <button onclick="downloadImage()">📥 Tải xuống</button>
+    <button onclick="downloadImage()">⬇ Tải xuống</button>
   </div>
 
   <!-- PREVIEW -->
   <div class="preview">
     <div id="canvas-area">
-      <img id="bg" src="background.png" />
-      <img id="avatarPreview" />
-      <div class="text name"></div>
-      <div class="text position"></div>
-      <div class="text wish"></div>
+
+      <img id="bg" src="./background.png">
+
+      <img id="avatarPreview">
+
+      <div class="info-box">
+        <div class="name"></div>
+        <div class="position"></div>
+      </div>
+
+      <div class="wish"></div>
+
     </div>
   </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
