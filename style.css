@@ -117,32 +117,37 @@ body {
   overflow: hidden;
 }
 
-/* MOBILE FIX */
+/* ===== FORM TO HƠN TRÊN MOBILE ===== */
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
-  .container {
-    flex-direction: column;
-    padding: 12px;
-  }
-
   .form {
-    width: 100%;
-    margin-bottom: 16px;
+    padding: 18px;
+    border-radius: 12px;
   }
 
-  .preview {
-    width: 100%;
-    overflow-x: auto;
+  .form h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 
-  #canvas-area {
-    width: 1000px; /* giữ nguyên khung chuẩn */
-    transform: scale(0.35);
-    transform-origin: top left;
+  .form input,
+  .form textarea {
+    font-size: 16px;      /* QUAN TRỌNG: tránh bị zoom */
+    padding: 12px 10px;   /* làm khung cao hơn */
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .form textarea {
+    min-height: 90px;
+  }
+
+  .form button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
   }
 }
+
 
