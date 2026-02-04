@@ -7,16 +7,33 @@
 </head>
 <body>
 
-  <input type="file" id="avatar" accept="image/*" />
-  <input type="text" id="name" placeholder="Họ và tên" />
-  <input type="text" id="role" placeholder="Chức vụ" />
-  <textarea id="wish" placeholder="Kỳ vọng của bạn"></textarea>
+<div class="container">
+  <!-- FORM -->
+  <div class="form">
+    <h3>Tuổi trẻ Vĩnh Long</h3>
 
-  <button onclick="buildImage()">Tạo ảnh</button>
-  <a id="download" download="ky-vong-dai-hoi.png">Tải ảnh</a>
+    <input type="file" id="avatar" accept="image/*" />
 
-  <canvas id="canvas"></canvas>
+    <input type="text" id="name" placeholder="Họ và tên" />
+    <input type="text" id="position" placeholder="Chức vụ" />
+    <textarea id="wish" placeholder="Kỳ vọng của bạn"></textarea>
 
-  <script src="script.js"></script>
+    <button onclick="downloadImage()">📥 Tải xuống</button>
+  </div>
+
+  <!-- PREVIEW -->
+  <div class="preview">
+    <div id="canvas-area">
+      <img id="bg" src="background.png" />
+      <img id="avatarPreview" />
+      <div class="text name"></div>
+      <div class="text position"></div>
+      <div class="text wish"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
