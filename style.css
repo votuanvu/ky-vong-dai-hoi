@@ -117,14 +117,32 @@ body {
   overflow: hidden;
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   .container {
     flex-direction: column;
+    padding: 12px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .preview {
+    width: 100%;
+    overflow-x: auto;
   }
 
   #canvas-area {
-    width: 100%;
-    height: auto;
+    width: 1000px; /* giữ nguyên khung chuẩn */
+    transform: scale(0.35);
+    transform-origin: top left;
   }
 }
+
