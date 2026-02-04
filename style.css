@@ -117,37 +117,21 @@ body {
   overflow: hidden;
 }
 
-/* ===== FORM TO HƠN TRÊN MOBILE ===== */
+/* ===== FORM CHIẾM 50% CHIỀU NGANG TRÊN MOBILE ===== */
 @media (max-width: 768px) {
 
+  .container {
+    align-items: center; /* căn giữa toàn bộ */
+  }
+
   .form {
-    padding: 18px;
-    border-radius: 12px;
+    width: 50%;
+    min-width: 280px;   /* tránh quá nhỏ trên máy hẹp */
+    max-width: 420px;   /* tránh quá to trên tablet */
+    margin: 0 auto;
   }
 
-  .form h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  .form input,
-  .form textarea {
-    font-size: 16px;      /* QUAN TRỌNG: tránh bị zoom */
-    padding: 12px 10px;   /* làm khung cao hơn */
-    margin-bottom: 12px;
-    border-radius: 8px;
-  }
-
-  .form textarea {
-    min-height: 90px;
-  }
-
-  .form button {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 8px;
-  }
 }
+
 
 
